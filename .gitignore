@@ -1,0 +1,46 @@
+# Taken from:
+# http://github.com/davidB/maven-scala-plugin/blob/master/.gitignore
+
+# use glob syntax.
+syntax: glob
+*.ser
+*.class
+*~
+*.bak
+*.off
+*.old
+
+# eclipse conf file
+.settings
+.classpath
+.project
+.manager
+
+# intellij
+.idea
+*.iml
+
+# building
+target
+build
+null
+tmp*
+temp*
+dist
+test-output
+build.log
+pom.xml.releaseBackup
+release.properties
+TestJavaClass*.java
+interpolated-*.xml
+
+# other scm
+.svn
+.CVS
+.hg*
+
+build.log
+
+/maven-scala-plugin.iml
+/maven-scala-plugin.ipr
+/maven-scala-plugin.iws
