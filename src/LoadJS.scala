@@ -11,7 +11,12 @@ object LoadJS {
             // a scope object that we use in later calls.
             val scope = cx.initStandardObjects();
 
-            var additionalCodeSnippets = List(" var label = new swingNames.JLabel(\"%s\");".format(args(0)),
+            var labelContents = "Called at : " + (new java.util.Date()).getTime();
+            for (arg <- args) {
+                labelContents += arg;
+            }
+
+            var additionalCodeSnippets = List(" var label = new swingNames.JLabel(\"%s\");".format(labelContents),
                                   " var pane = new swingNames.JPanel(); pane.setLayout(new swingNames.GridLayout(0, 1));",
                                   " pane.add(label);",
                                   " frame.getContentPane().add(pane, swingNames.BorderLayout.CENTER);")
