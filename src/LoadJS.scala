@@ -11,7 +11,14 @@ object LoadJS {
             // a scope object that we use in later calls.
             val scope = cx.initStandardObjects();
 
-            val s = createSwingFrame(args);
+            var additionalCodeSnippets = List(" var label = new swingNames.JLabel(\"%s\");".format(args(0)),
+                                  " var pane = new swingNames.JPanel(); pane.setLayout(new swingNames.GridLayout(0, 1));",
+                                  " pane.add(label);",
+                                  " frame.getContentPane().add(pane, swingNames.BorderLayout.CENTER);")
+
+            
+
+            val s = createSwingFrame(additionalCodeSnippets);
 
             cx.evaluateString(scope, s, "<cmd>", 1, null);
 
@@ -20,7 +27,7 @@ object LoadJS {
         }
   }
 
-  def createSwingFrame(additionalCodeToExecute: Array[String]): String =
+  def createSwingFrame(additionalCodeToExecute: List[String]): String =
   {
     var s = "var swingNames = JavaImporter();"
     s += " var swingNames = JavaImporter();"
