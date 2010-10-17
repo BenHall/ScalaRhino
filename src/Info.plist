@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist SYSTEM "file://localhost/System/Library/DTDs/PropertyList.dtd">
+<plist version="0.9">
+<dict>
+	<key>CFBundleName</key>
+	<string>ScalaRhino</string>
+	<key>CFBundleIdentifier</key>
+	<string>LoadJS</string>
+	<key>CFBundleVersion</key>
+	<string>100.0</string>
+	<key>CFBundleAllowMixedLocalizations</key>
+	<string>true</string>
+	<key>CFBundleExecutable</key>
+	<string>JavaApplicationStub</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleGetInfoString</key>
+	<string>ScalaRhino</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleIconFile</key>
+	<string>GenericApp.icns</string>
+  <key>CFBundleURLTypes</key>
+  <array>
+      <dict>
+          <key>CFBundleURLName</key>
+          <string>TestDigital</string>
+          <key>CFBundleURLSchemes</key>
+          <array>
+              <string>testdigital</string>
+          </array>
+      </dict>
+  </array>
+  <key>NSUIElement</key>
+  <true/>
+	<key>Java</key>
+	<dict>
+		<key>WorkingDirectory</key>
+		<string>$APP_PACKAGE/Contents/Resources/Java</string>
+		<key>MainClass</key>
+		<string>LoadJS</string>
+		<key>JVMVersion</key>
+		<string>1.5+</string>
+		<key>Arguments</key>
+		<string>Test</string>
+		<key>ClassPath</key>
+			<array>
+			<string>$JAVAROOT/ScalaRhino.jar</string>
+			<string>$JAVAROOT/scala-library.jar</string>
+			<string>$JAVAROOT/js.jar</string>
+			</array>
+	</dict>
+</dict>
+</plist>
