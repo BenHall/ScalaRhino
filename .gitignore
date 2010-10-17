@@ -16,10 +16,6 @@ syntax: glob
 .project
 .manager
 
-# intellij
-.idea
-*.iml
-
 # building
 target
 build
